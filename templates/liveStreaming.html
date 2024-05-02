@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <div class="text-container">
+                    <h2 class="project-title"> Sculpting Scenes: Multi-Task Deep Learning Frameworks for Abstracting Visual Information </h2>
+                    <p class="project-team">Timothy Gould, Priyanka Rajendrakumar Bhise, Hammad Mansoor, Benita Alexander</p>
+                    <p class="project-team">Advisor: Dr. Sidike Paheding (School of Engineering & Computing)</p>
+                    <!-- <p class="project-team">School of Engineering & Computing</p> -->
+                </div>
+                <div class="logo-container">
+                    <img src="static/images/fairfieldu-logo.png" alt="Logo" class="logo">
+                </div>
+            </div>
+        </header>
+        <div class="grid">
+            <div class="grid-item-one">
+                <h3 class="title-screen1">Input Video Stream</h3>
+                <img src="{{ url_for('video') }}" />
+            </div>
+            <div class="grid-item-two">
+                <h3 class="title-screen2">Object Detection</h3>
+                <img src="{{ url_for('video_objectDetection') }}"  />
+            </div>
+            <div class="grid-item-three">
+                <h3 class="title-screen3">Instance Segmentation</h3>
+                <img src="{{ url_for('video_semanticSegmentation') }}"  />
+            </div>
+            <div class="grid-item-four">
+                <h3 class="title-screen4">Caption Generation</h3>
+                <img src="{{ url_for('video') }}" />
+                <form method="post" action="/video_captionGeneration">
+                    <div class="button-div">
+                        <button type="submit" id="generateButton">Generate Caption</button>
+                        <p id="cp-textarea">{{ caption_text }}</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
