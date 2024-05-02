@@ -1,0 +1,208 @@
+
+html, body {
+  height: 100vh; /* Set height to 100% of the viewport height */
+  margin: 0; /* Remove default margins */
+}
+body {
+  margin: 0; /* Remove unexpected margins from browsers */
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+header{
+  grid-area: header;
+  background-color: #b72b35;
+  padding: 0.5%;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 16px;
+}
+
+.header-container{
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 2px;
+  height: 12vh;
+}
+
+.logo-container{
+  display: flex; /* Use flexbox for the logo container */
+  justify-content: center; /* Horizontally center the logo */
+  align-items: center;
+  /* justify-items: stretch; */
+}
+
+.text-container{
+  color: #ffffff;
+  align-items: center;
+  font-family: "Helvetica Neue Thin", "Helvetica Neue", Helvetica, Arial, san-serif;
+
+}
+
+.logo{
+  max-width: 100%;
+  height: 80%;
+  display: block; /*Ensure that width works as expected*/
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+
+.project-title {
+  text-align: center;
+  margin-bottom: 3px;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: block;
+  }
+
+.project-team {
+  text-align: center;
+  /* margin-left: 15px; */
+  font-size: 20px;
+  font-weight: 150;
+  letter-spacing: 1px;
+  display: block;
+}
+
+
+.title-screen1{
+  font-size: 30px;
+}
+
+.title-screen2{
+  font-size: 30px;
+}
+.title-screen3{
+  font-size: 30px;
+}
+.title-screen4{
+  font-size: 30px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "area1 area2"
+  "area3 area4";
+  border: 4px solid grey;
+  align-items: stretch;
+  overflow: hidden;
+  height: 88vh;
+}
+
+.grid-item-one{
+  grid-area: area1;
+  /* align-items: center; */
+  height: 100%;
+  overflow: hidden;
+  border: 4px solid grey;
+}
+
+.grid-item-two{
+  grid-area: area2;
+  border: 4px solid grey;
+}
+
+.grid-item-three{
+  grid-area: area3;
+  border: 4px solid grey;
+}
+
+.grid-item-four{
+  grid-area: area4;
+  border: 4px solid grey;
+
+}
+
+.grid-item-one,
+.grid-item-two,
+.grid-item-three,
+.grid-item-four {
+  position: relative; /* Make the container relatively positioned */
+}
+
+.grid-item-one h3,
+.grid-item-two h3,
+.grid-item-three h3,
+.grid-item-four h3 {
+  position: absolute; /* Position the h3 absolutely */
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  color: navy;/*black; /* Set text color */
+  background-color: rgba(255, 255, 255, 0.5); /* Set background color with opacity */
+  padding: 5px; /* Add padding for better appearance */
+  z-index: 1; /* Ensure h3 is above the img */
+}
+
+.grid-item-one img,
+.grid-item-two img,
+.grid-item-three img,
+.grid-item-four img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Ensure img is below the h3 */
+}
+
+
+#generateButton{
+  position: absolute; /* Make button absolute relative to its parent */
+  bottom: 50px;  /* Position it 10 pixels from the bottom */
+  left: 50px;  /* Position it 10 pixels from the left */
+  padding: 10px 20px;  /* Add some padding for better visuals */
+  background-color: #3498db; /* Adjust background color as desired */
+  color: white;  /* Set button text color */
+  border: none;  /* Remove default button border */
+  border-radius: 5px;  /* Add some rounded corners */
+  cursor: pointer;  /* Indicate clickable behavior */
+  font-size: 30px;
+  width: 200;
+  height: 50;
+}
+#cp-textarea{
+  position: absolute;
+  left: 50px;  /* Place it 10px from the left border */
+  bottom: 130px;
+  color: navy; /* Set text color */
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;  /* Remove default button border */
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 30px;
+}
+
+#launch-model{
+  position: absolute; /* Make button absolute relative to its parent */
+  text-align: center;
+  padding: 10px 20px;  /* Add some padding for better visuals */
+  background-color: #3498db; /* Adjust background color as desired */
+  color: white;  /* Set button text color */
+  border: none;  /* Remove default button border */
+  border-radius: 5px;  /* Add some rounded corners */
+  cursor: pointer;  /* Indicate clickable behavior */
+  font-size: 30px;
+  width: 200;
+  height: 50;
+}
+
+
+
+
